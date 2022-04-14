@@ -1,0 +1,14 @@
+{
+  "name": "pikachu",
+  "version": "1.0.0",
+  "description": "pikachu wallpaper",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Shubham Parashar",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

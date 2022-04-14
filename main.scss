@@ -1,0 +1,117 @@
+$color-primary: yellow;
+$color-dark: black;
+$color-light: white;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: $color-primary;
+}
+
+.fur{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.border{
+    border: 1px solid $color-dark;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.eye1-black {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: $color-dark;
+    clip-path: circle(38%);
+}
+
+.eye1-white {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 39%;
+    left: 40.8%;
+    background-color: $color-light;
+    clip-path: circle(38%);
+}
+
+.eye2-black {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    background-color: $color-dark;
+    clip-path: circle(38%);
+}
+
+.eye2-white {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 39%;
+    left: 59.3%;
+    background-color: $color-light;
+    clip-path: circle(38%);
+}
+
+.nose {
+    background-color: $color-dark;
+    position: absolute;
+    top: 51%;
+    left: 50.3%;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+    height: 34px;
+    width: 35px;
+
+}
+
+.mouth-1 {
+        position: absolute;
+        top: 53%;   
+        left: 47.5%;
+        height: 68px;
+        /* background-color: $color-dark; */
+        /* border-color: transparent transparent $color-dark transparent; */
+        border: 3px solid $color-dark;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-radius: 50%;
+        width: 5.5%;
+    }
+    
+    .mouth-2 {
+        position: absolute;
+        top: 53%;
+        left: 53%;
+        height: 68px;
+        /* border-color: transparent transparent $color-dark transparent;
+        border-radius: 50%; */
+        border: 3px solid $color-dark;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-radius: 50%;
+        width: 5.5%;
+}
+.blush-1 {
+    position: absolute;
+    top: 60%;
+    left: 36%;
+    background-color: red;
+    clip-path: circle(42%);
+}
+.blush-2 {
+    position: absolute;
+    top: 60%;
+    left: 64.5%;
+    background-color: red;
+    clip-path: circle(42%);
+}
