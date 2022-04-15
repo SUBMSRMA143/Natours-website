@@ -2,63 +2,49 @@ $color-primary: yellow;
 $color-dark: black;
 $color-light: white;
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
 
-    background-color: $color-primary;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+    background: $color-primary;
 }
 
-.fur{
-    width: 100%;
-    height: 100vh;
+.eyes{
+    display: flex;
+}
+
+.eyes .black{
+    width: 75px;
+    height: 75px;
+    background: black;
+    border-radius: 50%;
+    margin: 0 90px;
+    display: inline-block;
     position: relative;
+    top: -70px;
 }
 
-.border{
-    border: 1px solid $color-dark;
-    height: 100px;
-    width: 100px;
+
+.eyes .black::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50px;
     transform: translate(-50%, -50%);
-}
-
-.eye1-black {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    background-color: $color-dark;
-    clip-path: circle(38%);
-}
-
-.eye1-white {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 39%;
-    left: 40.8%;
-    background-color: $color-light;
-    clip-path: circle(38%);
-}
-
-.eye2-black {
-    position: absolute;
-    top: 40%;
-    left: 60%;
-    background-color: $color-dark;
-    clip-path: circle(38%);
-}
-
-.eye2-white {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 39%;
-    left: 59.3%;
-    background-color: $color-light;
-    clip-path: circle(38%);
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    /* z-index: 1; */
+    box-sizing: border-box;
 }
 
 .nose {
@@ -66,6 +52,7 @@ body {
     position: absolute;
     top: 51%;
     left: 50.3%;
+    transform: translate(-50%, -50%);
     clip-path: polygon(0 0, 100% 0, 50% 50%);
     height: 34px;
     width: 35px;
@@ -73,45 +60,64 @@ body {
 }
 
 .mouth-1 {
-        position: absolute;
-        top: 53%;   
-        left: 47.5%;
-        height: 68px;
-        /* background-color: $color-dark; */
-        /* border-color: transparent transparent $color-dark transparent; */
-        border: 3px solid $color-dark;
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-radius: 50%;
-        width: 5.5%;
-    }
-    
-    .mouth-2 {
-        position: absolute;
-        top: 53%;
-        left: 53%;
-        height: 68px;
-        /* border-color: transparent transparent $color-dark transparent;
-        border-radius: 50%; */
-        border: 3px solid $color-dark;
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-radius: 50%;
-        width: 5.5%;
+    position: absolute;
+    top: 53%;   
+    left: 47.5%;
+    height: 68px;
+    transform: translate(-50%, -50%);
+    /* background-color: $color-dark; */
+    /* border-color: transparent transparent $color-dark transparent; */
+    border: 3px solid $color-dark;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 50%;
+    width: 5.5%;
 }
+    
+.mouth-2 {
+    position: absolute;
+    top: 53%;
+    left: 53%;
+    height: 68px;
+    transform: translate(-50%, -50%);
+    /* border-color: transparent transparent $color-dark transparent;
+    border-radius: 50%; */
+    border: 3px solid $color-dark;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 50%;
+    width: 5.5%;
+}
+
+.blushes{
+    display: flex;
+}
+
 .blush-1 {
     position: absolute;
     top: 60%;
     left: 36%;
-    background-color: red;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%);
+    background: red;
     clip-path: circle(42%);
 }
 .blush-2 {
     position: absolute;
     top: 60%;
     left: 64.5%;
-    background-color: red;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%);
+    background: red;
     clip-path: circle(42%);
 }
+
+// -------------------------------------
+
+
+
+
