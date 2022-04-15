@@ -1,24 +1,12 @@
-let mouseCursor = document.querySelector('.cursor');
-let navlinks = document.querySelectorAll('.nav-links li');
+document.querySelector('body').addEventListener('mousemove', eyeball);
+function eyeball(){
+    const eye = document.querySelectorAll('.black');
+    eye.forEach(function(eye){
+        let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+        let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
 
-window.addEventListener('mousemove', cursor);
-
-function cursor(e) {
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
-}
-
-navlinks.forEach(link => {
-
-   link.addEventListener('mouseover', () => {
-       mouseCursor.classList.add('link-grow');
-       link.classList.add('hovered-link');
-    });
-    
-    link.addEventListener('mouseleave', () => {
-        link.classList.remove('hovered-link');
-        mouseCursor.classList.remove('link-grow');
-   });
-
+        let rad = Math.atan2(event.pageX - x, event.pageY - y);
+        let rot = (rad * (180 / Math.PI) * -1) + 90;
+        eye.style.transform = 'rotate(' + rot + 'deg)';
 });
-
+}
